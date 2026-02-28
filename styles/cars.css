@@ -1,0 +1,127 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+span {
+    color: #fffb00;
+}
+
+.catalog-container {
+    flex: 1;
+    padding: 160px 5% 50px;
+    background: radial-gradient(circle at top right, #00ccff, #000);
+}
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.car-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s ease;
+    backdrop-filter: blur(10px);
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    border-color: #fffb00;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.car-card-img {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.car-card-img img {
+    max-width: 100%;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5));
+    transition: 0.5s;
+}
+
+.car-card:hover .car-card-img img {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.car-card-content {
+    padding: 25px;
+}
+
+.category {
+    color: #fffb00;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.car-card-content h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.specs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-family: "League Gothic", sans-serif;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.btn-details {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #fffb00;
+    background: transparent;
+    color: #fffb00;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.btn-details:hover {
+    background: #fffb00;
+    color: #000;
+}
+
+/* Remover o overflow: hidden do body para poder rolar a lista de carros */
+body {
+    overflow-y: auto !important;
+}
+
+@media (max-width: 1024px) {
+
+    h1 {
+        margin-bottom: 20px;
+        display: block;
+    }
+}
