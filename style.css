@@ -1,5 +1,6 @@
 @import url(./styles/home.css);
 @import url(./styles/cars.css);
+@import url(./styles/contact.css);
 
 * {
     margin: 0;

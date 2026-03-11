@@ -1,0 +1,163 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* container principal */
+.info-container {
+    padding: 160px 5% 80px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* título */
+h1 {
+    text-align: center;
+}
+
+h1 span {
+    color: #fffb00;
+    margin: 0 8px;
+}
+
+/* layout contato */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* cards */
+.forms {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    width: 50%;
+    margin: 0 25% 0 25%;
+}
+
+/* formulário */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.05);
+    color: #fff;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #fffb00;
+}
+
+.btn-submit {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #fffb00;
+    background: transparent;
+    color: #fffb00;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background: #fffb00;
+    color: #000;
+}
+
+/* mapa */
+.endereco-mapa {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    width: 50%;
+    margin: 0 25% 0 25%;
+}
+.img-mapa {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.img-mapa:hover {
+    transform: translateY(-10px);
+    transition: 0.5s;
+    border-color: #fffb00;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.information {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 25% 0 25%;
+
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 15px;
+    backdrop-filter: blur(10px);
+    width: 50%;
+    height: 110px;
+}
+/* whatsapp */
+
+.whats {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+
+.img-whats {
+    width: 40px;
+    height: 40px;
+}
+
+.img-whats:hover {
+    transform: translateY(-5px);
+    transition: 0.5s;
+    border-color: #fffb00;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.whats-text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* responsivo */
+
+@media (max-width: 900px) {
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .img-mapa {
+        max-width: 350px;
+    }
+}
