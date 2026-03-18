@@ -37,12 +37,12 @@ h1 span {
     border-radius: 20px;
     padding: 30px;
     backdrop-filter: blur(10px);
-    width: 50%;
-    margin: 0 25% 0 25%;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* formulário */
-
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -93,9 +93,11 @@ h1 span {
     border-radius: 20px;
     padding: 30px;
     backdrop-filter: blur(10px);
-    width: 50%;
-    margin: 0 25% 0 25%;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
+
 .img-mapa {
     width: 100%;
     height: auto;
@@ -113,23 +115,23 @@ h1 span {
 .information {
     display: flex;
     justify-content: space-between;
-    margin: 15px 25% 0 25%;
-
+    margin: 15px auto 0 auto;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 15px;
     backdrop-filter: blur(10px);
-    width: 50%;
-    height: 110px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    gap: 20px;
 }
-/* whatsapp */
 
+/* whatsapp */
 .whats {
     display: flex;
     align-items: center;
     gap: 12px;
-
 }
 
 .img-whats {
@@ -150,14 +152,18 @@ h1 span {
 }
 
 /* responsivo */
-
 @media (max-width: 900px) {
-
     .contact-content {
         grid-template-columns: 1fr;
     }
 
     .img-mapa {
-        max-width: 350px;
+        max-width: 100%;
+    }
+
+    .information {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
